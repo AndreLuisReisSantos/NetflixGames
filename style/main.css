@@ -1,0 +1,135 @@
+:root{
+    --vermelho:#e50914;
+    --preta:#000;
+    --branco: #fff;
+    --cinza: #bbb;
+    --tipografia_texto: 'Roboto', sans-serif;
+}
+
+/* cabeçalho*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: var(--tipografia_texto);
+    color: var(--branco);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--preta);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header nav a{
+    margin-right: 2rem;
+    color: var(--cinza);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header nav a:hover{
+    color: var(--branco);
+}
+
+/*filme principal */
+
+main h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+main p{
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+main .jogo_principal{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7) ), url('/img/thelastofus2_capa.jpg');
+    height: 550px;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main .botao{
+    background-color: rgba(100,100,100,0.5);
+    color: var(--branco);
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+}
+
+main .botao:hover{
+    background-color: rgba(255,255,255,0.9);
+    color: var(--preta);
+}
+
+.botao i{
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.botao i:hover{
+    color: black;
+}
+
+.container{
+    margin: 0 50px;
+}
+
+main .container{
+    max-width: 60%;
+}
+
+.carrossel_games .capa_miniatura{
+    filter: saturate(20%);
+}
+
+.carrossel_games .capa_miniatura:hover{
+    filter: saturate(100%);
+}
+
+/*responsividade tela 1024*/
+
+/*responsividade tela 650*/
+
+@media screen and (max-width:650px){
+
+    *{
+        font-size: 0.6rem;
+    }
+
+    header .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    header nav{
+        margin-top: 20px;
+    }
+    
+    header nav a{
+        margin: 10px;
+        font-size: 1.3rem;
+    }
+
+}
